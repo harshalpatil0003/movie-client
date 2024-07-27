@@ -7,8 +7,10 @@ function Home() {
     const [movies, setmovies] = useState([])
 
     const loadmovies = async () => {
+        
         toast.loading("Loading Movies..")
-        const response = await axios.get('https://movie-server-q50b.onrender.com/movies')
+
+        const response = await axios.get('http://localhost:8000/movies')
         toast.dismiss()
         toast.success("Movies Loaded Successfully")
         setmovies(response.data.data);
