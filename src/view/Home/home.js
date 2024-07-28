@@ -10,7 +10,7 @@ function Home() {
 
         toast.loading("Loading Movies..")
 
-        const response = await axios.get(`http://localhost:8000/movie`)
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/movies`)
         toast.dismiss()
         toast.success("Movies Loaded Successfully")
         setmovies(response.data.data);
