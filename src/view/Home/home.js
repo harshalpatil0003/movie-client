@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import Moviecard from '../../components/Moviecard/Moviecard'
 import toast, { Toaster } from 'react-hot-toast'
+import Add from './add.png'
+import './home.css'
 
 function Home() {
     const [movies, setmovies] = useState([])
@@ -43,10 +46,12 @@ function Home() {
                         description={description}
                         image_url={image_url}
                         trailer_url={trailer_url}
+                        loadmovies={loadmovies}
                     />)
                 })
             }
-             <Toaster/>
+            <Toaster />
+            <Link to="/add">  <img src={Add} className='add-img' alt='add-img' /> </Link>
         </div>
     )
 }
