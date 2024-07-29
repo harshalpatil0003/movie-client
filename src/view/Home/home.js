@@ -22,8 +22,7 @@ function Home() {
         loadmovies()
     }, [])
     return (
-        <div>
-            <h1>Movies</h1>
+        <div className='d-flex gap-4 justify-content-center flex-wrap'>
             {
                 movies.map((movie, i) => {
                     const {

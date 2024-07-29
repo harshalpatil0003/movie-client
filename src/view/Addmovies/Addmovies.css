@@ -1,4 +1,26 @@
-.preview{
+form{
+    display: block;
+    width: 500px;
+    background-color: antiquewhite;
+}
+.preview {
     height: 200px;
     width: auto;
+    border-radius: 10px;
+}
+.form-control{
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+}
+.form-page{
+    
+    background-image: url("https://wallpapercave.com/wp/wp6121903.jpg");
+    background-size: cover;
+}
+.preview-area{
+    height: auto;
+    object-fit: cover;
+    width: 400px;
 }

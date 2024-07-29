@@ -45,55 +45,59 @@ function Addmovies() {
 
   }
   return (
-    <div>
-      <h1>Add Movies</h1>
-      <form>
+    <div className='form-page py-5'>
+      <form className='border mx-auto p-4 rounded-2'>
+        <h1>Add Movies</h1>
+
         <input type='text'
           placeholder='Title'
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className='movie-input' />
+          className='form-control' />
 
         <input type='text'
           placeholder='Director'
           value={director}
           onChange={(e) => setDirector(e.target.value)}
-          className='movie-input' />
+          className='form-control' />
 
         <input type='text'
           placeholder='Release Date'
           value={release_date}
           onChange={(e) => setRelease_date(e.target.value)}
-          className='movie-input' />
+          className='form-control' />
 
         <input type='Number'
           placeholder='Rating'
           value={rating}
           onChange={(e) => setrating(e.target.value)}
-          className='movie-input' />
+          className='form-control' />
 
-        <input type='text'
+        <textarea type='text'
           placeholder='Description'
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className='movie-input' />
-          
-        <img src={image_url} alt='poster' className='preview' />
+          className='form-control' />
+
+        <div className='preview-area border border-success rounded-3 mt-3 mx-auto px-4 py-4'><img src={image_url} alt='poster' className='preview' /></div>
         <input type='text'
-          placeholder='Poster'
+          placeholder='Poster url'
           value={image_url}
           onChange={(e) => setImage_url(e.target.value)}
-          className='movie-input' />
+          className='form-control' />
 
         <input type='text'
-          placeholder='Trailer'
+          placeholder='Trailer url'
           value={trailer_url}
           onChange={(e) => setTrailer_url(e.target.value)}
-          className='movie-input' />
+          className='form-control' />
 
-        <button type='button' onClick={addmovie}>Add Movie</button>
+        <button type='button' onClick={addmovie} className='btn btn-success mt-3 me-3'>Add Movie</button>
+        <Link to="/">
+          <button type='button' className='btn btn-warning mt-3'>All Movies</button>
+        </Link>
       </form>
-      <Link to="/">All Movies</Link>
+
       <Toaster />
     </div>
   )
